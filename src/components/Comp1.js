@@ -6,7 +6,7 @@ const Comp1 = () => {
     const[items,setItems] = useState([])
 
     useEffect(()=>{
-        fetch(`https://jsonplaceholder.typicode.com/${resourceType}`)
+        fetch(`https://jsonplaceholder.typicode.com/${resourceType}/?_limit=10`)
         .then(response => response.json())
         .then(json => setItems(json))
 
